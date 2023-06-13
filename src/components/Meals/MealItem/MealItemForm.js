@@ -1,4 +1,4 @@
-import { type } from '@testing-library/user-event/dist/type';
+
 import Input from '../../UI/Input';
 import classes from './MealItemForm.module.css'
 
