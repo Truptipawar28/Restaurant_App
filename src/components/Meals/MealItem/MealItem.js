@@ -1,8 +1,9 @@
-import MealItemForm from './MealItemForm';
-import classes from './MealItem.module.css';
+import React from "react";
+import classes from "./MealItem.module.css";
+import MealItemForm from "./MealItemForm";
 
 const MealItem = (props) => {
-  const price = `$${props.price.toFixed(2)}`;
+  const price = `Rs.${props.price.toFixed(2)}`; // toFixed(2) Number of digits after decimal point. Must be in the range 0-20 and return a string representing a number in fixed-point notation
 
   return (
     <li className={classes.meal}>
@@ -12,7 +13,8 @@ const MealItem = (props) => {
         <div className={classes.price}>{price}</div>
       </div>
       <div>
-        <MealItemForm />
+        <MealItemForm id={props.id} item={props} /> 
+        {/* above item={props} props here passing all the items i.e name,description & price */}
       </div>
     </li>
   );
