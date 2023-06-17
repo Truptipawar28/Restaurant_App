@@ -32,7 +32,7 @@ const Cart = (props) => {
       <div>{cartItems}</div>
       <div className={classes.total}>
         <span>Total Amount</span>
-        <span>Rs.{total}</span>
+        <span> $ {total}</span>
         {/* Here above we have right 985 amount as hard coded but later we will derive dynamically */}
       </div>
       <div className={classes.actions}>
